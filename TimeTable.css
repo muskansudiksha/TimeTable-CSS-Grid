@@ -1,0 +1,232 @@
+*{
+    padding:0px;
+    margin:0px;
+    border:0px;
+}
+body{
+    background-image:url(projectbgimg.jpeg);
+    opacity:0.90;
+
+}
+.container{
+    display:grid;
+    margin:10px;
+    justify-items:center;
+}
+
+.timetable{
+    padding-top:10px;
+    justify-self:center;
+    align-self:center;
+    box-sizing: border-box;
+    font-size: 1cm;
+}
+.grid1{
+    display:grid;
+    padding:30px 50px 0px;
+    grid-template-columns:100px 1fr;
+    grid-template-rows:50px 50px 1fr 30px;
+    grid-template-areas:
+    "header header"
+    "gap time"
+    "days routine"
+    "footer footer"
+}
+
+.header{
+    display:grid;
+    grid-area:header;
+    justify-items:center;
+    grid-template-columns:repeat(4,1fr);
+    background:#DAEAF6;
+    justify-items:center;
+    align-items:center;
+}
+.elements{
+    display:grid;
+}
+.routine{
+    display:grid;
+    grid-area:routine;
+    grid-gap:10px;
+    grid-template-columns:repeat(5,1fr) 50px repeat(4,1fr);
+    grid-template-rows:repeat(5,40px);
+    align-items:center;
+    justify-items:center;
+    background:#e8dff5;
+}
+.days{
+    grid-area:days;
+    align-items:center;
+    justify-items:center;
+    display:grid;
+    grid-template-rows:repeat(5,40px);
+    grid-gap:10px;
+    background:#FCE1E4;
+}
+.gap{
+    grid-area:gap;
+    background:#FCE1E4;
+    display:grid;
+    justify-items:center;
+    align-items:center;
+    height:100%;
+}
+.time{
+    grid-area:time;
+    display:grid;
+    grid-template-columns:repeat(5,1fr) 50px repeat(4,1fr);
+    background:#ddedea;
+    justify-items:center;
+    align-items:center;
+    
+}
+.break{
+    grid-row:1/span5;
+    grid-column:6/7;
+}
+.break>p{
+    padding:20px;
+}
+.routine>p{ 
+    background:hsla(250,100%,100%,0.5);
+}
+.routine p:nth-child(1){
+    grid-column:1/1;
+}
+.routine p:nth-child(2){
+    grid-column:4/5;
+}
+.routine p:nth-child(3){
+    grid-column:5/6;
+}
+.routine p:nth-child(4){
+    grid-column:2/3;
+    grid-row:2/3;
+}
+.routine p:nth-child(5){
+    grid-column:3/4;
+    grid-row:2/3;
+}
+.routine p:nth-child(6){
+    grid-column:4/5;
+    grid-row:2/3;
+}
+.routine p:nth-child(7){
+    grid-column:5/6;
+    grid-row:2/3;
+}
+.routine p:nth-child(8){
+    grid-column:8/10;
+    grid-row:2/3;
+    height:100%;
+    width:100%;
+    text-align:center;
+    padding-top:10px;
+    box-sizing: border-box;
+}
+.routine p:nth-child(9){
+    grid-column:3/5;
+    grid-row:3/4;
+    height:100%;
+    width: 100%;
+    text-align:center;
+    padding-top:10px;
+    box-sizing: border-box;
+}
+.routine p:nth-child(10){
+    grid-column:5/6;
+    grid-row:3/4;
+}
+.routine p:nth-child(11){
+    grid-column:8/9;
+    grid-row:3/4;
+}
+.routine p:nth-child(12){
+    grid-column:9/10;
+    grid-row:3/4;
+}
+.routine p:nth-child(13){
+    height:100%;
+    width:100%;
+    grid-column:1/4;
+    grid-row:4/5;
+    text-align:center;
+    padding-top:10px;
+    box-sizing: border-box;
+}
+.routine p:nth-child(14){
+    grid-column:4/5;
+    grid-row:4/5;
+}
+.routine p:nth-child(15){
+    grid-column:5/6;
+    grid-row:4/5;
+}
+.routine p:nth-child(16){
+    grid-column:9/10;
+    grid-row:4/5;
+}
+.routine p:nth-child(17){
+    grid-column:2/3;
+    grid-row:5/6;
+    
+}
+.routine p:nth-child(18){
+    grid-column:5/6;
+    grid-row:5/6;
+}
+
+.time element div:nth-child(6){
+    grid-column:7/8;
+}
+.time element div:nth-child(7){
+    grid-column:8/9;
+}
+.time element div:nth-child(8){
+    grid-column:9/10;
+}
+.time element div:nth-child(9){
+    grid-column:10/11;
+}
+
+.grid2{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:50px 1fr;
+    padding:3px 30px 0px;
+    grid-template-areas:
+    "heading heading heading"
+    "coursecode coursetitle faculty"
+    
+}
+
+.heading{
+    display:grid;
+    grid-area:heading;
+    grid-template-columns:1fr 1fr 1fr;
+    background:#DAEAF6;
+    align-items:center;
+    padding-left: 20px;;
+}
+.coursecode,.coursetitle,.faculty{
+    padding-left:20px;
+    display:grid;
+    grid-gap:10px;
+    align-items:center;
+    padding-bottom:15px;
+    padding-top:15px;
+}
+.coursecode{
+    background:#fce1e4;
+}
+.coursetitle{
+    background: #e8dff5;
+}
+.faculty{
+    background: #ddedea;
+}
+
+.heading p:nth-child(2),.heading p:nth-child(3){
+    padding-left:10px;
+}
